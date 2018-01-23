@@ -6,6 +6,9 @@ package my.jenkins.test.testproj;
  */
 class App 
 {
+	
+	protected App(){}
+	
     public final static void main( final String[] args )
     {
         System.out.println( "Hello World!" );
