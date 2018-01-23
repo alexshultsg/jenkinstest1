@@ -9,6 +9,7 @@ pipeline {
         stage("Init") {
             steps {
                 echo "Init..."
+                bat 'set JAVA_HOME'
             }
         }
         stage("Build") {
