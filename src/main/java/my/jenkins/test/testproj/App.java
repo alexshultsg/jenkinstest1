@@ -4,9 +4,9 @@ package my.jenkins.test.testproj;
  * Hello world!
  *
  */
-public class App 
+class App 
 {
-    public static void main( String[] args )
+    public static void main( final String[] args )
     {
         System.out.println( "Hello World!" );
     }
