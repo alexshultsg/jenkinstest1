@@ -3,14 +3,13 @@ pipeline {
     stages {
         stage("Init") {
             steps {
-                echo "Testing..."
+                echo "Init..."
+                env.JAVA_HOME='C:\\Program Files (x86)\\Java\\jre1.8.0_111'
             }
         }
         stage("Build") {
             steps {
                 echo "Building..."
-                bat 'set JAVA_HOME=C:\\Program Files (x86)\\Java\\jdk1.8.0_111'
-                bat 'java -version'
                 bat 'mvn clean package'
             }
             post {
