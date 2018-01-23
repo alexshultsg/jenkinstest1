@@ -16,9 +16,8 @@ pipeline {
             post {
                 success {
                     echo 'Now Archiving...'
-                    archiveArtifacts artifacts 'target/*.jar'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
                 }
-
             }
         }
         stage("Deploy") {
