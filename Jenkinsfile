@@ -1,7 +1,11 @@
 pipeline {
-    agent any
-    node {
-        echo "node..."
+    agent {
+        
+    
+
+	    node {
+    	    echo "node..."
+    	}
     }
 
  
