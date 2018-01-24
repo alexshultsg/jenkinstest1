@@ -10,13 +10,6 @@ pipeline {
     stages {
         stage("Init") {
             steps {
-	            if (isUnix()) {
-	            	echo "Unix"
-	            }
-	            else {
-	            	echo "windows"
-	            }
-
                 echo "Init...Init..."
                 bat 'set JAVA_HOME'
             }
