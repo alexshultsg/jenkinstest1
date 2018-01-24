@@ -16,7 +16,9 @@ pipeline {
         }
         stage("Build unix") {
         	when {
-        	    isUnix()
+        	    expression {
+					return isUnix()	      
+        	    }
         	}
 
             steps {
