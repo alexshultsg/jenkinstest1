@@ -1,4 +1,7 @@
 pipeline {
+
+	echo 'Start build'
+
     agent any
 
 	parameters {
