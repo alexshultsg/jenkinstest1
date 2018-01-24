@@ -14,6 +14,22 @@ pipeline {
                 bat 'set JAVA_HOME'
             }
         }
+        stage("Build unix") {
+        	when {
+        	    isUnix()
+        	}
+
+            steps {
+                echo "Building..."
+                bat 'mvn clean package'
+            }
+            post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }
+        }        
         stage("Build") {
             steps {
                 echo "Building..."
