@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage("Init") {
             steps {
-                echo "Init..."
+                echo "Init...Init..."
                 bat 'set JAVA_HOME'
             }
         }
