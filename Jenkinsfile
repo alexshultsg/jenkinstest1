@@ -6,11 +6,6 @@ pipeline {
 	    string(name: 'tomcat_prod', defaultValue: '', description: '')
 	}
 
-	triggers {
-	    pollSCM('* * * * *')
-	}
-
-
     stages {
         stage("Init") {
             steps {
