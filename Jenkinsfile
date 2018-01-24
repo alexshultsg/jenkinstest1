@@ -32,9 +32,14 @@ pipeline {
                 }
             }
         }        
-        stage("Build") {
+        stage("Build Windows") {
+           	when {
+        	    expression {
+					return !isUnix()	      
+        	    }
+        	}
             steps {
-                echo "Building..."
+                echo "Building windows..."
                 bat 'mvn clean package'
             }
             post {
