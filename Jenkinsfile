@@ -1,13 +1,11 @@
 pipeline {
 
-	echo 'Start build'
-
     agent any
 
-	parameters {
-	    string(name: 'tomcat_dev', defaultValue: '', description: '')
-	    string(name: 'tomcat_prod', defaultValue: '', description: '')
-	}
+//	parameters {
+//	    string(name: 'tomcat_dev', defaultValue: '', description: '')
+//	    string(name: 'tomcat_prod', defaultValue: '', description: '')
+//	}
 
     stages {
         stage("Init") {
