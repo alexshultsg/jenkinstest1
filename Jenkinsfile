@@ -30,6 +30,11 @@ pipeline {
                 echo "Deploying..."
             }
         }
+        stage("Deploy to Staging1") {
+            steps {
+                echo "Deploying1..."
+            }
+        }
         stage("Deploy to Production") {
             steps {
             	timeout( time:5, unit:'DAYS') {
